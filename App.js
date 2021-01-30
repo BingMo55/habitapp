@@ -11,7 +11,7 @@ export default function App() {
         </Text>
       <StatusBar style="auto" />
       <TouchableOpacity 
-      onPress={() => alert('Hello, world!')}
+      onPress={() => alert('Hello, world! -nick was here.')}
       style={styles.button}>
       <Text style={styles.buttonText}>pick a photo</Text>
       </TouchableOpacity>
