@@ -19,7 +19,7 @@ function HomeScreen({ navigation }) {
     <View style={styles.container}>
       <Image source = {logo} style={styles.logo} />
       <Text style={styles.instructions}>
-        Open up App.js to start working on your app! lol
+        Open up App.js to start working on your app! NICK IS AWESOME
         </Text>
       <StatusBar style="auto" />
       <TouchableOpacity 
