@@ -144,7 +144,7 @@ if (hasPermission === null) {
 return (
     <View style={styles.container}>
       <ImageBackground source={backgroundImage} style={styles.image}>
-      <View>
+      <View >
         <TouchableOpacity  style={{paddingLeft:175,paddingTop:100}} onPress={() => {
           setShowCamera(true);
         }}>
@@ -200,21 +200,21 @@ return (
 const DATA = [
   {
     id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
-    title: "Running",
+    title: "Do 10 pullups a day.",
     uris:[
         "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/morning-selfie-cape-town-south-africa-royalty-free-image-686291386-1563312327.jpg",
     ]
   },
   {
     id: "3ac68afc-c605-48d3-a4f8-fbd91aa97f63",
-    title: "Reading",
+    title: "Eat your first meal after 10am.",
     uris:[
         "https://writewelldaily.files.wordpress.com/2014/01/img_3834.jpg"
     ]
   },
   {
     id: "58694a0f-3da1-471f-bd96-145571e29d72",
-    title: "Coding",
+    title: "Write down a goal for the day.",
     uris: ["https://pbs.twimg.com/media/C6YjftmXMAAniUS.jpg"
     ]
   },

@@ -44,7 +44,6 @@ function HomeScreen({ navigation }) {
         <Text style={styles.buttonText}>pick a photo</Text>
       </TouchableOpacity>
       <Button
-        title="========THIS IS A LINK TO ANOTHER PAGE======="
         onPress={() => navigation.navigate("Details")}
       />
     </View>
