@@ -15,8 +15,10 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { InterestScreen } from "./screens/interests";
 import ImagePickerExample, { Habits } from "./screens/habits";
-import { camera } from "./screens/camera";
-import HabitGroupRoom from "./screens/HabitGroupRoom"
+import { HabitGroupRoom } from "./screens/HabitGroupRoom";
+import {useEffect} from "react";
+import * as firebase from 'firebase';
+
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
@@ -52,20 +54,20 @@ function HomeScreen({ navigation }) {
 }
 
 export default function App() {
-  // useEffect(() => {
-  //   if (!firebase.apps.length) {
-  //         // Initialize Firebase
-  //   const firebaseConfig = {
-  //     apiKey: "AIzaSyDXSXbJfLVjbPMlSbNj4Mm7u5LmVoLZ0vk",
-  //     authDomain: "habitgoals-5ee7d.firebaseapp.com",
-  //     databaseURL: "https://habitgoals-5ee7d-default-rtdb.firebaseio.com",
-  //     storageBucket: "habitgoals-5ee7d.appspot.com",
-  //   };
-  //   const firebaseApp = firebase.initializeApp(firebaseConfig);
-  //  }else {
-  //     firebase.app(); // if already initialized, use that one
-  //  }
-  // }, []);
+  useEffect(() => {
+    if (!firebase.apps.length) {
+          // Initialize Firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyDXSXbJfLVjbPMlSbNj4Mm7u5LmVoLZ0vk",
+      authDomain: "habitgoals-5ee7d.firebaseapp.com",
+      databaseURL: "https://habitgoals-5ee7d-default-rtdb.firebaseio.com",
+      storageBucket: "habitgoals-5ee7d.appspot.com",
+    };
+    const firebaseApp = firebase.initializeApp(firebaseConfig);
+   }else {
+      firebase.app(); // if already initialized, use that one
+   }
+  }, []);
 
   
   // return (
@@ -119,6 +121,20 @@ export default function App() {
             tabBarIcon: ({ color, size }) => (
               <MaterialCommunityIcons
                 name="settings"
+                color={color}
+                size={size}
+              />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="HabitGroupRoom"
+          component={HabitGroupRoom}
+          options={{
+            tabBarLabel: 'Chat',
+            tabBarIcon: ({ color, size }) => (
+              <MaterialCommunityIcons
+                name="chat"
                 color={color}
                 size={size}
               />

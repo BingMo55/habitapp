@@ -8,10 +8,10 @@ export function ChallengeProgress() {
     const [progress, setProgress] = useState(0);
     useEffect(() => {
         console.log("ready to listen");
-        var ref = firebase.database().ref('test/');
+        var ref = firebase.database().ref('messages');
         ref.on('value', (snapshot) => {
         const data = snapshot.val();
-        setProgress(data);
+        console.log(data);
         });
     }, []);
     return (
