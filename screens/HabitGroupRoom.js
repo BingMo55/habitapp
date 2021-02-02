@@ -30,7 +30,7 @@ function convertFirebaseDataToMessageList(obj) {
             }
         });
     }
-    return result;
+    return result.reverse();
 }
 
 export function HabitGroupRoom() {
@@ -90,7 +90,7 @@ export function HabitGroupRoom() {
         console.log("mess", messages);
         firebase.database().ref('messages/').push({
             _id: 1,
-            text: 'Hello develof',
+            text: 'Hello!',
             createdAt: new Date(),
             user: {
                 _id: 1,

@@ -98,7 +98,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        initialRouteName="Feed"
+        initialRouteName="selecStack"
         tabBarOptions={{
           activeTintColor: '#42f44b',
         }}>
